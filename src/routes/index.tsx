@@ -56,7 +56,7 @@ const etapas = [
   { i: premium.url, t: "Materiais de Qualidade", d: "Trabalhamos com fornecedores e acabamentos de alto padrão." },
 ];
 
-const galeria = [m003.url, m011.url, m018.url, m005.url, m021.url, m019.url];
+const galeria = [m017.url, m011.url, m018.url, m003.url, m021.url, m005.url];
 
 function Cta({ children }: { children: React.ReactNode }) {
   return (
