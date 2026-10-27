@@ -1,43 +1,49 @@
-# Marcenaria Jardim Paulista
+# Marcenaria Santos
 
-@asset:da_01m5z97rp0fx5ank3np3yers0m:"Container" Quero que faça para mim um site de marcenaria baseado no modelo que lhe enviei. Aqui está o dados da marcenaria: Av. Luís Gonzaga do Nascimento, N° 300 - JARDIM PAULISTA, Monte Mor - SP, 13198-432
+**Móveis planejados sob medida em Monte Mor e região.**
 
-Telefone: (19) 98902-4149
+Uma landing page para apresentar os projetos da Marcenaria Santos e facilitar
+o contato de quem quer transformar seu espaço.
 
-Em anexo vai as fotos e o logo, faça um site bem legal para mim
+**Acesse o site:** [cargnieli2016.github.io/marcenaria-santos](https://cargnieli2016.github.io/marcenaria-santos/)
 
-This project was built with [Lovable](https://lovable.dev).
+## O que você encontra
 
-## Build with Lovable
+- Ambientes planejados e fotos de projetos.
+- Etapas do atendimento à montagem.
+- Contato direto pelo WhatsApp.
+- Endereço, mapa e acesso às rotas.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/624c6751-704b-4caf-8ba6-670eef17fb91).
+## Rodar no seu computador
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Instale o [Node.js](https://nodejs.org/) e execute na pasta do projeto:
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm install
 npm run dev
 ```
 
-## GitHub Pages
+Abra no navegador o endereço mostrado no terminal.
 
-The GitHub Actions workflow builds and publishes the static site to GitHub Pages
-when changes are pushed to `main`. In the repository settings, set **Pages >
-Build and deployment > Source** to **GitHub Actions**.
+## Publicação
 
-The Pages build is separate from the default Cloudflare build:
+O site é publicado no **GitHub Pages** automaticamente a cada atualização da
+branch `main`. Para habilitar, selecione **GitHub Actions** em **Settings >
+Pages > Build and deployment > Source**.
 
-```sh
-npm run build:pages
+Para testar os builds manualmente:
+
+```bash
+npm run build:pages  # GitHub Pages
+npm run build        # Cloudflare
 ```
 
-It prerenders the site and writes the deployable files to `dist/client`.
-The regular `npm run build` remains configured for Cloudflare.
+## Contato
+
+**Marcenaria Santos** · (19) 98902-4149
+
+Av. Luís Gonzaga do Nascimento, 300 — Jardim Paulista, Monte Mor — SP
+
+## Feito com
+
+React · TypeScript · TanStack Start · Vite · Tailwind CSS
