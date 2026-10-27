@@ -39,6 +39,7 @@ const WHATS =
   encodeURIComponent("Olá! Vim pelo site e gostaria de um orçamento de móveis planejados.");
 const ADDRESS = "Av. Luís Gonzaga do Nascimento, Nº 300 – Jardim Paulista, Monte Mor – SP, 13198-432";
 const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
+const MAP_EMBED = "https://maps.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
 
 const ambientes = [
   { img: m008, t: "Cozinha Planejada", d: "Design inteligente, ergonomia e materiais que unem beleza e durabilidade." },
@@ -81,7 +82,7 @@ function Index() {
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-24 pt-6">
           <img src={logo} alt="Marcenaria Santos" className="h-24 w-auto rounded-lg" />
           <nav className="mt-4 flex flex-wrap justify-center gap-6 text-xs font-medium uppercase tracking-widest">
-            {[["#ambientes", "Ambientes"], ["#processo", "Nosso processo"], ["#galeria", "Trabalhos"], ["#contato", "Contato"]].map(([h, l]) => (
+            {[["#ambientes", "Ambientes"], ["#processo", "Nosso processo"], ["#galeria", "Trabalhos"], ["#contato", "Contato"], ["#localizacao", "Localização"]].map(([h, l]) => (
               <a key={h} href={h} className="transition hover:text-gold">{l}</a>
             ))}
           </nav>
@@ -162,6 +163,30 @@ function Index() {
           <h2 className="text-3xl font-bold md:text-4xl">Vamos falar sobre o seu projeto?</h2>
           <p className="mt-4 text-gold">Chame agora mesmo no WhatsApp e conte sua necessidade para o seu ambiente planejado.</p>
           <div className="mt-8"><Cta>Falar no WhatsApp</Cta></div>
+        </div>
+      </section>
+
+      <section id="localizacao" className="mx-auto max-w-6xl px-5 py-20">
+        <h2 className="text-center text-3xl font-bold text-ink md:text-4xl">Venha nos visitar</h2>
+        <p className="mt-3 text-center text-muted-foreground">{ADDRESS}</p>
+        <div className="mt-8 overflow-hidden rounded-2xl shadow-[var(--shadow-card)]">
+          <iframe
+            src={MAP_EMBED}
+            title="Localização da Marcenaria Santos no Google Maps"
+            className="h-80 w-full border-0 md:h-96"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+        <div className="mt-6 text-center">
+          <a
+            href={MAPS}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block rounded-md border border-ink px-6 py-3 font-display text-sm font-semibold uppercase tracking-wider text-ink transition hover:bg-ink hover:text-ink-foreground"
+          >
+            Abrir rotas no Google Maps
+          </a>
         </div>
       </section>
 

@@ -26,3 +26,18 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## GitHub Pages
+
+The GitHub Actions workflow builds and publishes the static site to GitHub Pages
+when changes are pushed to `main`. In the repository settings, set **Pages >
+Build and deployment > Source** to **GitHub Actions**.
+
+The Pages build is separate from the default Cloudflare build:
+
+```sh
+npm run build:pages
+```
+
+It prerenders the site and writes the deployable files to `dist/client`.
+The regular `npm run build` remains configured for Cloudflare.
