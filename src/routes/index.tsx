@@ -1,20 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/logo.png.asset.json";
-import m003 from "@/assets/m003.webp.asset.json";
-import m005 from "@/assets/m005.webp.asset.json";
-import m008 from "@/assets/m008.webp.asset.json";
-import m011 from "@/assets/m011.webp.asset.json";
-import m016 from "@/assets/m016.webp.asset.json";
-import m017 from "@/assets/m017.webp.asset.json";
-import m018 from "@/assets/m018.webp.asset.json";
-import m019 from "@/assets/m019.webp.asset.json";
-import m021 from "@/assets/m021.webp.asset.json";
-import atendimento from "@/assets/atendimento.png.asset.json";
-import projeto from "@/assets/projeto.png.asset.json";
-import producao from "@/assets/producao.png.asset.json";
-import entrega from "@/assets/entrega.png.asset.json";
-import gestao from "@/assets/gestao.png.asset.json";
-import premium from "@/assets/premium.png.asset.json";
+import logo from "@/assets/logo.png";
+import m003 from "@/assets/m003.webp";
+import m005 from "@/assets/m005.webp";
+import m008 from "@/assets/m008.webp";
+import m011 from "@/assets/m011.webp";
+import m016 from "@/assets/m016.webp";
+import m017 from "@/assets/m017.webp";
+import m018 from "@/assets/m018.webp";
+import m019 from "@/assets/m019.webp";
+import m021 from "@/assets/m021.webp";
+import atendimento from "@/assets/atendimento.png";
+import projeto from "@/assets/projeto.png";
+import producao from "@/assets/producao.png";
+import entrega from "@/assets/entrega.png";
+import gestao from "@/assets/gestao.png";
+import premium from "@/assets/premium.png";
 
 const TITLE = "Marcenaria Santos | Móveis Planejados em Monte Mor - SP";
 const DESC =
@@ -41,22 +41,22 @@ const ADDRESS = "Av. Luís Gonzaga do Nascimento, Nº 300 – Jardim Paulista, M
 const MAPS = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(ADDRESS);
 
 const ambientes = [
-  { img: m008.url, t: "Cozinha Planejada", d: "Design inteligente, ergonomia e materiais que unem beleza e durabilidade." },
-  { img: m016.url, t: "Dormitório Sob Medida", d: "Conforto, organização e sofisticação para um ambiente que acolhe." },
-  { img: m017.url, t: "Comercial e Consultórios", d: "Ambientes profissionais que transmitem confiança aos seus clientes." },
-  { img: m019.url, t: "Estantes e Painéis", d: "Soluções que ampliam espaços e valorizam a arquitetura." },
+  { img: m008, t: "Cozinha Planejada", d: "Design inteligente, ergonomia e materiais que unem beleza e durabilidade." },
+  { img: m016, t: "Dormitório Sob Medida", d: "Conforto, organização e sofisticação para um ambiente que acolhe." },
+  { img: m017, t: "Comercial e Consultórios", d: "Ambientes profissionais que transmitem confiança aos seus clientes." },
+  { img: m019, t: "Estantes e Painéis", d: "Soluções que ampliam espaços e valorizam a arquitetura." },
 ];
 
 const etapas = [
-  { i: atendimento.url, t: "Atendimento Consultivo", d: "Entendemos suas necessidades, rotina e expectativas antes de qualquer proposta." },
-  { i: projeto.url, t: "Projeto Personalizado", d: "Desenvolvemos um projeto exclusivo, alinhando design, funcionalidade e estética." },
-  { i: producao.url, t: "Produção Sob Medida", d: "Cada móvel é fabricado especificamente para o seu espaço." },
-  { i: entrega.url, t: "Entrega e Montagem", d: "Instalação precisa, limpa e com atenção total aos detalhes." },
-  { i: gestao.url, t: "Acompanhamento", d: "Você acompanha cada etapa, com prazos claros e comunicação transparente." },
-  { i: premium.url, t: "Materiais de Qualidade", d: "Trabalhamos com fornecedores e acabamentos de alto padrão." },
+  { i: atendimento, t: "Atendimento Consultivo", d: "Entendemos suas necessidades, rotina e expectativas antes de qualquer proposta." },
+  { i: projeto, t: "Projeto Personalizado", d: "Desenvolvemos um projeto exclusivo, alinhando design, funcionalidade e estética." },
+  { i: producao, t: "Produção Sob Medida", d: "Cada móvel é fabricado especificamente para o seu espaço." },
+  { i: entrega, t: "Entrega e Montagem", d: "Instalação precisa, limpa e com atenção total aos detalhes." },
+  { i: gestao, t: "Acompanhamento", d: "Você acompanha cada etapa, com prazos claros e comunicação transparente." },
+  { i: premium, t: "Materiais de Qualidade", d: "Trabalhamos com fornecedores e acabamentos de alto padrão." },
 ];
 
-const galeria = [m017.url, m011.url, m018.url, m003.url, m021.url, m005.url];
+const galeria = [m017, m011, m018, m003, m021, m005];
 
 function Cta({ children }: { children: React.ReactNode }) {
   return (
@@ -76,10 +76,10 @@ function Index() {
     <main className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative overflow-hidden rounded-b-[40px] bg-ink text-ink-foreground">
-        <img src={m008.url} alt="Cozinha planejada Marcenaria Santos" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={m008} alt="Cozinha planejada Marcenaria Santos" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center px-5 pb-24 pt-6">
-          <img src={logo.url} alt="Marcenaria Santos" className="h-24 w-auto rounded-lg" />
+          <img src={logo} alt="Marcenaria Santos" className="h-24 w-auto rounded-lg" />
           <nav className="mt-4 flex flex-wrap justify-center gap-6 text-xs font-medium uppercase tracking-widest">
             {[["#ambientes", "Ambientes"], ["#processo", "Nosso processo"], ["#galeria", "Trabalhos"], ["#contato", "Contato"]].map(([h, l]) => (
               <a key={h} href={h} className="transition hover:text-gold">{l}</a>
@@ -157,7 +157,7 @@ function Index() {
 
       {/* CTA final */}
       <section id="contato" className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img src={m011.url} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />
+        <img src={m011} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />
         <div className="relative mx-auto max-w-3xl px-5 py-20 text-center">
           <h2 className="text-3xl font-bold md:text-4xl">Vamos falar sobre o seu projeto?</h2>
           <p className="mt-4 text-gold">Chame agora mesmo no WhatsApp e conte sua necessidade para o seu ambiente planejado.</p>
@@ -167,7 +167,7 @@ function Index() {
 
       <footer className="bg-ink text-ink-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 border-t border-ink-foreground/10 px-5 py-12 md:flex-row md:justify-between">
-          <img src={logo.url} alt="Marcenaria Santos" className="h-24 w-auto" />
+          <img src={logo} alt="Marcenaria Santos" className="h-24 w-auto" />
           <div className="space-y-2 text-center text-sm md:text-left">
             <p><span className="font-semibold text-gold">Endereço: </span><a href={MAPS} target="_blank" rel="noreferrer" className="hover:text-gold">{ADDRESS}</a></p>
             <p><span className="font-semibold text-gold">Telefone: </span><a href="tel:+5519989024149" className="hover:text-gold">(19) 98902-4149</a></p>
